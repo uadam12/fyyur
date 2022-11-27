@@ -1,0 +1,22 @@
+{% block custom_css %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='action.css') }}">
+{% endblock %}
+
+<div class="action-container">
+    <div class="action-wrapper">
+        <div>
+            <a class="btn btn-warning" href="{{ request.url }}edit">Update</a>
+            <button class="btn btn-danger" onclick="b4Delete(this)">Delete</button>
+        </div>
+        <div class="confirm-box">
+            <button 
+                onclick="destroy()" 
+                class="btn btn-danger">Confirm</button>
+            <button onclick="cancel(this)" class="btn btn-success">Cancel</button>
+        </div>
+    </div>
+</div>
+
+{% block custom_js %}
+	<script src="{{ url_for('static', filename='action.js') }}"></script>
+{% endblock %}

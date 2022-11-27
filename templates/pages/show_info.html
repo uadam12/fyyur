@@ -1,0 +1,9 @@
+<div class="col-sm-4">
+    <div class="tile tile-show">
+        <img src="{{ img_link }}" alt="Show {{ page|capitalize }} Image" />
+        <h5>
+            <a href="/{{ page }}/{{ id }}">{{ name }} h</a>
+        </h5>
+        <h6>{{ show.start_time|datetime('full') }}</h6>
+    </div>
+</div>

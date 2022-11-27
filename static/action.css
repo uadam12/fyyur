@@ -1,0 +1,24 @@
+.action-container {
+    perspective: 1000px;
+    height: 50px;
+}
+.action-wrapper {
+    position: relative;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+.action-wrapper.confirm {transform: rotateY(180deg);}
+.action-wrapper > div {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.confirm-box {transform: rotateY(180deg);}
