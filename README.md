@@ -1,4 +1,4 @@
-## Fyyur
+## Fyyur (Musicians app)
 
 ### Introduction
 
@@ -67,35 +67,24 @@ Highlight folders:
 
 ### Development Setup
 
-First, [install Flask](http://flask.pocoo.org/docs/1.0/installation/#install-flask) if you haven't already.
+First, [clone the app](https://github.com/uadam12/fyyur.git) and run the following commands if you haven't already.
 
 ```
-$ cd ~
-$ sudo pip3 install Flask
+$ cd fyyur
+$ python -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ flask db init
+$ flask db migrate
+$ flask db upgrade
 ```
 
 To start and run the local development server,
 
-1. Initialize and activate a virtualenv:
-
 ```
-$ cd YOUR_PROJECT_DIRECTORY_PATH/
-$ virtualenv --no-site-packages env
-$ source env/bin/activate
-```
-
-2. Install the dependencies:
-
-```
-$ pip install -r requirements.txt
-```
-
-3. Run the development server:
-
-```
-$ export FLASK_APP=myapp
+$ export FLASK_APP=app
 $ export FLASK_ENV=development # enables debug mode
-$ python3 app.py
+$ flask run
 ```
 
-4. Navigate to Home page [http://localhost:5000](http://localhost:5000)
+Then, navigate to Home page [http://localhost:5000](http://localhost:5000)
